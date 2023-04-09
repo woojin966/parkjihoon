@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+html, body {position: relative; width: 100%; min-width: 1920px; height: auto; min-height: 100vh;}
+body {background-color: #3c3c3c;
+    
+}
+body::-webkit-scrollbar {
+    
+}
+
+header{display: none !important; width: 1440px; margin: 0 auto; background-color: #3c3c3c; display: flex; align-items: center; justify-content: space-between;}
+.homeBtn{padding: 15px 0; width: 30px; text-align: center; font-size: 20px;}
+.hBtnbox{display: inline-block; text-align: right; width: calc(100% - 30px);}
+.sitemap{position: relative; height: 20px; width: 30px; z-index: 10;}
+.sitemap span{position: absolute; width: 100%; height: 2px; background-color: #fff; left: 0;}
+.sitemap span:first-child{top: 0;}
+.sitemap span:nth-child(2){top: calc(50% - 2px);}
+.sitemap span:last-child{bottom: 0;}
+.sitemap.on span:first-child{transform: rotate(45deg); top: 9px;}
+.sitemap.on span:nth-child(2){opacity: 0;}
+.sitemap.on span:last-child{transform: rotate(-45deg); bottom: 9px;}
+
+main{}
+.contentWrap{margin: 0 auto; padding: 100px 0; width: 1440px;  height: 100%; display: flex; justify-content: space-between;}
+.titleBox{position: relative;}
+.titleBox .title{font-size: 60px; font-weight: 600; line-height: .85; margin-bottom: 32px; font-family: 'Blinker', sans-serif; color: #fff;}
+.titleBox .subBtn{font-size: 36px; display: inline-block; font-family: 'Blinker', sans-serif; margin-bottom: 20px; position: relative; z-index: 0; color: #fff;}
+.titleBox .subBtn:before{content:''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: transparent; transition: .4s; z-index: -1;}
+.titleBox .subBtn:hover{color: #3c3c3c; transition: .4s;}
+.titleBox .subBtn:hover:before{height: 100%; transition: .4s; background-color: #1fff57;}
+.titleBox .activeBtn{color: #3c3c3c;}
+.titleBox .activeBtn:before{height: 100%; background-color: #1fff57;}
+.titleBottom{position: absolute; bottom: -125px; left: -55px; display: block; width: 100%;}
+
+.contentBox{width: calc(100% - 360px);}
+._cont{display: none; color: #fff;}
+._cont.currentTabCont{display: block;}
+._cont h2{position: relative; display: inline-block; margin-bottom: 24px; font-size: 40px; font-family: 'Blinker', sans-serif; color: #fff; font-weight: 600;}
+._cont h2::before{content: ''; position: absolute; bottom: 5px; width: 100%; height: 4px; background-color: #1fff57; font-family: 'Blinker'; z-index: -1;}
+
+/**/
+._cont#tab1 > div{margin-bottom: 40px;}
+._cont#tab1 ul{display: flex; flex-wrap: wrap; justify-content: space-between;}
+._cont#tab1 ul li{width: calc(20% - 10px); margin-bottom: 10px;}
+._cont#tab1 ul .fullLi{width: 100%; background-color: #000;}
+._cont#tab1 ul li a{position: relative; width: 100%; height: 206px; overflow: hidden;}
+._cont#tab1 ul li a:before{content: ''; position: absolute; bottom: 10px; left: 0; width: 100%; font-size: 16px; font-weight: bold; color: #fff; text-align: center; box-shadow: 0 0 8px rgba(0,0,0,.15); opacity: 0; z-index: 1;}
+._cont#tab1 ul li a.thumb1:before{content: '캐릭터 작업 : 인간';}
+._cont#tab1 ul li a.thumb2:before{content: '캐릭터 작업 : 서브캐릭터';}
+._cont#tab1 ul li a.thumb3:before{content: '캐릭터 작업 : 미믹';}
+._cont#tab1 ul li a.thumb4:before{content: '캐릭터 작업 : 정령';}
+._cont#tab1 ul li a.thumb5:before{content: '캐릭터 작업 : 천상';}
+._cont#tab1 ul li a.thumb6:before{content: '캐릭터 작업 : 악마';}
+._cont#tab1 ul li a.thumb7:before{content: '캐릭터 작업 : 언데드';}
+._cont#tab1 ul li a.thumb8:before{content: '캐릭터 작업 : 요정';}
+._cont#tab1 ul li a.thumb9:before{content: '캐릭터 작업 : 야수';}
+._cont#tab1 ul li a.thumb10:before{content: '캐릭터 작업 : 보스';}
+._cont#tab1 ul li a:after{content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.15); opacity: 0;}
+._cont#tab1 ul li a:hover{border: 4px solid #1fff57;}
+._cont#tab1 ul li a:hover:before{opacity: 1;}
+._cont#tab1 ul li a:hover:after{opacity: 1;}
+._cont#tab1 ul li a img{width: 100%; height: auto;}
+._cont#tab1 ul li.videoLi{width: calc(50% - 5px); overflow: hidden;}
+._cont#tab1 ul.title li.videoLi{height: 830px;}
+._cont#tab1 ul.title li.videoLi:last-child video{width: 109%;}
+._cont#tab1 ul.characterAni li.videoLi:first-child, ._cont#tab1 ul.characterAni li.videoLi:nth-child(2){height: 766px;}
+._cont#tab1 ul.characterAni li.videoLi:nth-child(3), ._cont#tab1 ul.characterAni li.videoLi:nth-child(4){height: 516px;}
+._cont#tab1 ul.characterAni li.videoLi:nth-child(4) video{width: 111.5%;}
+._cont#tab1 ul li.fullLi{width: 100%;}
+._cont#tab1 ul li.videoLi video{width: 100%;}
+._cont#tab1 ul li.fullLi video{width: 100%; height: 450px;}
+
+._cont#tab2 .about{margin-bottom: 40px;}
+.about h3{font-size: 24px; font-weight: bold; margin-bottom: 12px;}
+.about .greenT{color: #1fff57; margin-bottom: 16px; font-size: 16px;}
+.about p{font-size: 20px;}
+.about p .greenT{color: #1fff57; font-weight: bold; font-size: 20px;}
+.skill ul{display: flex;}
+.skill ul li{margin-right: 24px; width: 120px; text-align: center;}
+.skill ul li img{width: 100%; height: 120px; margin-bottom: 12px;}
+.skill ul li p{font-size: 20px; font-weight: bold;}
